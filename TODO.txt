@@ -1,0 +1,20 @@
+1. Create a game loop
+2. Draw a pixel -> this is your pixel monster
+3. Have keys to move pixel around
+4. Draw some pixels around the screen.  Maybe as text somewhere
+5. When the pixel you control gets close to the pixels then they become part of your pixel monster
+
+
+How do you die?
+- You die when you last pixel has been erased
+
+Easors and erasor vortex monsters?
+- Will try to erase your pixels
+
+Other pixel monsters will try to take your pixels.
+- If another pixel monster shots you then it will knock loose pixel you have collected
+- If you are down to a few pixed and you are hit by a pixel monster projectile, then you are also defeated and lose.
+
+You kill vortex monsters by shooting high speed pixels at them, which will bring them down to size, or split them up.
+
+Pixels will start to appear randomly, so they can be collected.  Possibly, text pixels could also be used.
