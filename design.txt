@@ -1,0 +1,10 @@
+Design Overview
+
+The basic idea to the game is a clone of snake except that eating different things gives different powers.  Also there will be some monsters running around shooting stuff at you.
+- If you are hit in the tail then the bottom half of the tail will fall away and stay as a wall.
+- Pixels will start to appear randomly, so they can be collected.
+- Enemies will randomly spawn and move across the map.  More and more will appear over time.
+
+How do you die?
+- when an enemy hits you in the pixel monsters face with a bullet or you run into a wall.
+
