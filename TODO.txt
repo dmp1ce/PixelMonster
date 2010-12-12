@@ -1,7 +1,7 @@
-1. Create a game loop                                         [x]
-2. Draw a pixel -> this is your pixel monster                 [x]
-3. Have keys to move pixel around                             [x]
+Create a game loop                                         [x]
+Draw a pixel -> this is your pixel monster                 [x]
+Have keys to move pixel around                             [x]
 
-
-4. Draw some pixels around the screen.  Maybe as text somewhere     
-5. When the pixel you control gets close to the pixels then they become part of your pixel monster
+Make the "pixel" slightly bigger
+Make it so that random pixels are on the board
+When the head pixel runs over another pixel it starts to follow behind

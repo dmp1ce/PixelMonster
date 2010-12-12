@@ -1,5 +1,8 @@
 /* Creates a framework for keeping track of inputs */
 
+// Load additional scripts
+loadScript('keys.js');
+
 // Input listeners
 window.addEventListener('keydown', onKeyDown, true);
 window.addEventListener('keyup', onKeyUp, true);
@@ -15,13 +18,15 @@ var input = new function() {
     this.keysDown[keyNum] = true;
   }
   
+  /* Removes a key down state */
   this.setKeyUp = function(keyNum) {
     this.keysDown[keyNum] = false;
   }
   
-  this.isKeyDown = function(keyNum) {
-    if(this.keysDown[keyNum] == true) {
-      return(true);  
+  /* Determine if a key is down from the passed in key enum */
+  this.isKeyDown = function(keyName) {
+    if(this.keysDown[keyName.keyCode] == true) {
+      return(true);
     }
     return(false);
   }
@@ -33,7 +38,8 @@ function onKeyDown(event) {
   input.setKeyDown(event.keyCode);
   
   // disable scroll bar for arrow keys
-  if(event.keyCode == 36 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 40) {
+  if(event.keyCode == KEYS.LEFT_ARROW.keyCode || event.keyCode == KEYS.RIGHT_ARROW.keyCode ||
+     event.keyCode == KEYS.UP_ARROW.keyCode || event.keyCode == KEYS.DOWN_ARROW.keyCode) {
     event.preventDefault();
   }
 }
@@ -42,7 +48,8 @@ function onKeyUp(event) {
   input.setKeyUp(event.keyCode);
   
   // disable scroll bar for arrow keys
-  if(event.keyCode == 36 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 40) {
+  if(event.keyCode == KEYS.LEFT_ARROW.keyCode || event.keyCode == KEYS.RIGHT_ARROW.keyCode ||
+     event.keyCode == KEYS.UP_ARROW.keyCode || event.keyCode == KEYS.DOWN_ARROW.keyCode) {
     event.preventDefault();
   }
 }
