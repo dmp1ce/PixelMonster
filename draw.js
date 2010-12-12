@@ -1,7 +1,5 @@
 /* helper function for rendering */
 
-// 
-
 /**
  * Simply draw a pixel to the screen
  * @param location vector
@@ -15,5 +13,5 @@ function drawPixel(location, color, size) {
   }
   
   context.fillStyle = color;
-  context.fillRect(location.x, location.y, size, size);
+  context.fillRect(location.x(), location.y(), size, size);
 }

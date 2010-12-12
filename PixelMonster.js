@@ -27,12 +27,12 @@ window.addEventListener('load', function () {
   }
   
   // Set the default location of pixelMonster
-  pixelMonster.location.x = 150;
-  pixelMonster.location.y = 150;
+  pixelMonster.location.setx(150);
+  pixelMonster.location.sety(150);
   
   // Setup the game board
-  gameBoard.size.x = 1000;
-  gameBoard.size.y = 1000;
+  gameBoard.size.setx(1000);
+  gameBoard.size.sety(1000);
   gameBoard.color = '#b5b0b0';
   
 }, false);
@@ -43,27 +43,27 @@ function onTimerTick() {
   // Change state of game
   // if keys are pressed then move
   if(input.isKeyDown(KEYS.LEFT_ARROW) == true) {
-    pixelMonster.location.x = pixelMonster.location.x - 1;
+    pixelMonster.location.setx(pixelMonster.location.x() - 1);
   }
   
   if(input.isKeyDown(KEYS.RIGHT_ARROW) == true) {
-    pixelMonster.location.x = pixelMonster.location.x + 1;
+    pixelMonster.location.setx(pixelMonster.location.x() + 1);
   }
   
   if(input.isKeyDown(KEYS.DOWN_ARROW) == true) {
-    pixelMonster.location.y = pixelMonster.location.y + 1;
+    pixelMonster.location.sety(pixelMonster.location.y() + 1);
   }
   
   if(input.isKeyDown(KEYS.UP_ARROW) == true) {
-    pixelMonster.location.y = pixelMonster.location.y - 1;
+    pixelMonster.location.sety(pixelMonster.location.y() - 1);
   }
   
   // Clear scene
-  context.clearRect(0,0,gameBoard.size.x,gameBoard.size.y); // clear canvas
+  context.clearRect(0,0,gameBoard.size.x(),gameBoard.size.y()); // clear canvas
   
   // Draw background
   context.fillStyle = gameBoard.color;
-  context.fillRect(0, 0, gameBoard.size.x, gameBoard.size.y);
+  context.fillRect(0, 0, gameBoard.size.x(), gameBoard.size.y());
   
   // Draw pixelMonster
   pixelMonster.draw();
