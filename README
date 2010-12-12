@@ -1,0 +1,9 @@
+PixelMonster
+
+Attempt at creating a HTML5 Canvas game in a weekend.  This project is mostly a learning excersise for myself.
+
+To run the program, open the index.html file with the Chrome or Chromium web browser.
+
+== Movement ==
+
+Use the arrow keys to move the small pixel around on the screen.
